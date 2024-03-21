@@ -32,9 +32,3 @@ void add_linked_list_tail(linked_list_t * list, void * value){
     }
     list->tail = new_tail;
 }
-
-#ifndef UNIT_TEST
-int main(void) { return 0; }
-#else
-// noop
-#endif

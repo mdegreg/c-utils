@@ -1,4 +1,4 @@
-add_executable(c_utils
+add_library(c_utils
         collections.c
         collections.h
 )
