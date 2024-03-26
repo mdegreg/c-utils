@@ -7,6 +7,8 @@
 
 linked_list_t create_linked_list(void){
     linked_list_t new_list;
+    // Rely on NULL pointers to detect an
+    // empty linked list.
     new_list.head = NULL;
     new_list.tail = NULL;
     return new_list;
@@ -17,6 +19,7 @@ void add_linked_list_head(linked_list_t * list, void * value){
     new_head = (node_t *) malloc(sizeof(node_t));
     new_head->data = value;
     if (list->head != NULL) {
+        // Ensuring continuity of linked list when adding to head.
         new_head->next = list->head;
     }
     list->head = new_head;
